@@ -9,6 +9,6 @@ public class Main {
         System.out.println("press 4 to delete data");
         System.out.println("press 5 to exit");
         Scanner sc = new Scanner(System.in);
-        int a =sc.nextInt():
+        int a =sc.nextInt();
     }
 }
