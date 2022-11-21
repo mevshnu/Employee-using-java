@@ -5,12 +5,35 @@ public class Main {
     static Scanner sc = new Scanner(System.in);
     public static void main(String[] args)
     {
-        System.out.println("press 1 to add data");
-        System.out.println("press 2 to view data");
-        System.out.println("press 3 to search data");
-        System.out.println("press 4 to delete data");
-        System.out.println("press 5 to exit");
-        int a =sc.nextInt();
+        while (true) {
+            System.out.println("press 1 to add data");
+            System.out.println("press 2 to view data");
+            System.out.println("press 3 to search data");
+            System.out.println("press 4 to delete data");
+            System.out.println("press 5 to exit");
+            int a = sc.nextInt();
+            switch (a) {
+                case 1:
+                    addemployee();
+                    break;
+                case 2:
+                    view();
+                    break;
+                case 3:
+                    search();
+                    break;
+                case 4:
+                    delete();
+                    break;
+                case 5:
+                    System.exit(0);
+                    break;
+                default:
+                    System.out.println("wrong input");
+                    break;
+
+            }
+        }
     }
     static void addemployee()
     {
@@ -27,7 +50,7 @@ public class Main {
         System.out.println("enter company name");
         String company=sc.next();
         System.out.println("enter phone number");
-        double phonenumber = sc.nextDouble();
+        long phonenumber = sc.nextLong();
         System.out.println("email");
         String email=sc.next();
         a1.add(code);
@@ -79,6 +102,18 @@ static void search()
             System.out.println("employee not found");
         }
 }
-
+static void delete()
+{
+    System.out.println("enter the employee code");
+    int o = sc.nextInt();
+    for(int i=0;i<= user.size();i++)
+    {
+        if((user.get(i).get(0).equals(o)))
+        {
+        user.remove(i);
+        System.out.println("user removed Sucessfully");
+        }
+    }
+}
 }
 
