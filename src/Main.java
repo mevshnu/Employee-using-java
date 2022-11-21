@@ -49,10 +49,36 @@ static void view()
         System.out.println("employee designation " + user.get(i).get(2));
         System.out.println("employee salary " + user.get(i).get(3));
         System.out.println("employee company name " + user.get(i).get(4));
-        System.out.println("employee name " + user.get(i).get(5));
-        System.out.println("employee phone number " + user.get(i).get(6));
-        System.out.println("employee email" + user.get(i).get(7));
+        System.out.println("employee phone number " + user.get(i).get(5));
+        System.out.println("employee email" + user.get(i).get(6));
     }
 }
+static void search()
+{
+    System.out.println("enter the employee code");
+
+        int o = sc.nextInt();
+        int flag = 0;
+        for(int i=0;i<user.size();i++)
+        {
+            if((user.get(i).get(0)).equals(o))
+            {
+                System.out.println("employee Found");
+                System.out.println("employee code " + user.get(i).get(0));
+                System.out.println("employee name " + user.get(i).get(1));
+                System.out.println("employee designation " + user.get(i).get(2));
+                System.out.println("employee salary " + user.get(i).get(3));
+                System.out.println("employee company name " + user.get(i).get(4));
+                System.out.println("employee phone number " + user.get(i).get(5));
+                System.out.println("employee email" + user.get(i).get(6));
+                flag = 1;
+            }
+        }
+        if(flag==0)
+        {
+            System.out.println("employee not found");
+        }
+}
+
 }
 
